@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2xeasvpsiwat"]
+
+[ext_resource type="Script" path="res://scenes/Game.gd" id="1_akyfh"]
+[ext_resource type="Texture2D" uid="uid://b4kw8mcv853os" path="res://graphics/generic_button_square_outline.png" id="2_4wacr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_my2nf"]
+font_size = 36
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_akyfh")
+
+[node name="GameField" type="Container" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="HBox" type="HBoxContainer" parent="GameField"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="GameField/HBox"]
+layout_mode = 2
+
+[node name="TurnLabel" type="Label" parent="GameField/HBox/VBox"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_my2nf")
+horizontal_alignment = 1
+
+[node name="Grid" type="GridContainer" parent="GameField/HBox"]
+layout_mode = 2
+columns = 3
+
+[node name="TextureButton" type="TextureButton" parent="GameField/HBox/Grid"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("2_4wacr")

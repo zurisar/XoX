@@ -19,6 +19,14 @@ config/icon="res://icon.svg"
 
 Global="*res://scripts/Global.gd"
 
+[display]
+
+window/size/viewport_width=480
+window/size/viewport_height=640
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+window/handheld/orientation=1
+
 [dotnet]
 
 project/assembly_name="XoX"
